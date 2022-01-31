@@ -139,10 +139,10 @@ add_action( 'widgets_init', 'thuandev_widgets_init' );
  */
 function thuandev_scripts() {
 	wp_enqueue_style( 'thuandev-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_enqueue_style('theme_demo-bootstrap-style',get_template_directory_uri().'assets/css/bootstrap.min.css', array(),_S_VERSION);
-	wp_enqueue_style( 'thuongmaidientu-custom-style', get_stylesheet_directory_uri().'custom.css', array(), _S_VERSION );
+	wp_enqueue_style('theme_demo-bootstrap-style',get_template_directory_uri().'/assets/css/bootstrap.min.css', array(),_S_VERSION);
+	wp_enqueue_style( 'thuongmaidientu-custom-style', get_stylesheet_directory_uri().'/custom.css', array(), _S_VERSION );
 	wp_style_add_data( 'thuandev-style', 'rtl', 'replace' );
-	wp_enqueue_script('theme_demo-bootstrap-script',get_template_directory_uri().'assets/js/bootstrap.min.js', array(),_S_VERSION);
+	wp_enqueue_script('theme_demo-bootstrap-script',get_template_directory_uri().'/assets/js/bootstrap.min.js', array(),_S_VERSION);
 	wp_enqueue_script( 'thuandev-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
